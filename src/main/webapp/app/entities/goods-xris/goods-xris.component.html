@@ -1,0 +1,69 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="xrisApp.goods.home.title">Goods</span>
+
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-goods-xris" [routerLink]="['/goods-xris/new']">
+            <fa-icon icon="plus"></fa-icon>
+            <span  jhiTranslate="xrisApp.goods.home.createLabel">
+            Create a new Goods
+            </span>
+        </button>
+    </h2>
+
+    <jhi-alert-error></jhi-alert-error>
+
+    <jhi-alert></jhi-alert>
+
+    <div class="alert alert-warning" id="no-result" *ngIf="goods?.length === 0">
+        <span jhiTranslate="xrisApp.goods.home.notFound">No goods found</span>
+    </div>
+
+    <div class="table-responsive" id="entities" *ngIf="goods && goods.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+                <tr>
+                    <th scope="col" ><span jhiTranslate="global.field.id">ID</span></th>
+                    <th scope="col" ><span jhiTranslate="xrisApp.goods.name">Name</span></th>
+                    <th scope="col" ><span jhiTranslate="xrisApp.goods.description">Description</span></th>
+                    <th scope="col" ><span jhiTranslate="xrisApp.goods.goods">Goods</span></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let goods of goods ;trackBy: trackId">
+                    <td><a [routerLink]="['/goods-xris', goods.id, 'view']">{{ goods.id }}</a></td>
+                    <td>{{ goods.name }}</td>
+                    <td>{{ goods.description }}</td>
+                    <td>
+                        <div *ngIf="goods.goods">
+                            <a [routerLink]="['/price-xris', goods.goods?.id, 'view']" >{{ goods.goods?.id }}</a>
+                        </div>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <button type="submit"
+                                    [routerLink]="['/goods-xris', goods.id, 'view']"
+                                    class="btn btn-info btn-sm">
+                                <fa-icon icon="eye"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                            </button>
+
+                            <button type="submit"
+                                    [routerLink]="['/goods-xris', goods.id, 'edit']"
+                                    class="btn btn-primary btn-sm">
+                                <fa-icon icon="pencil-alt"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                            </button>
+
+                            <button type="submit" (click)="delete(goods)"
+                                    class="btn btn-danger btn-sm">
+                                <fa-icon icon="times"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

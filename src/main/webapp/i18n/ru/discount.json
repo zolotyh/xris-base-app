@@ -1,0 +1,23 @@
+{
+  "xrisApp": {
+    "discount": {
+      "home": {
+        "title": "Discounts",
+        "createLabel": "Создать новый Discount",
+        "createOrEditLabel": "Создать или отредактировать Discount",
+        "notFound": "No Discounts found"
+      },
+      "created": "Новый Discount создан с идентификатором {{ param }}",
+      "updated": "Discount обновлен с идентификатором {{ param }}",
+      "deleted": "Discount удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Discount {{ id }}?"
+      },
+      "detail": {
+        "title": "Discount"
+      },
+      "value": "Value",
+      "transactionRow": "Transaction Row"
+    }
+  }
+}

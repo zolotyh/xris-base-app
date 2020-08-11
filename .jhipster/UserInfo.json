@@ -1,0 +1,42 @@
+{
+  "name": "UserInfo",
+  "fields": [
+    {
+      "fieldName": "email",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "login",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "department",
+      "otherEntityRelationshipName": "userInfo",
+      "relationshipName": "department",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "transaction",
+      "otherEntityRelationshipName": "userInfo",
+      "relationshipName": "transaction",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20200811191935",
+  "entityTableName": "user_info",
+  "dto": "no",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*",
+  "angularJSSuffix": "xris"
+}

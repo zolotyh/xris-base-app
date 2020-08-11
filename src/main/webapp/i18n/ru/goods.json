@@ -1,0 +1,26 @@
+{
+  "xrisApp": {
+    "goods": {
+      "home": {
+        "title": "Goods",
+        "createLabel": "Создать новый Goods",
+        "createOrEditLabel": "Создать или отредактировать Goods",
+        "notFound": "No Goods found"
+      },
+      "created": "Новый Goods создан с идентификатором {{ param }}",
+      "updated": "Goods обновлен с идентификатором {{ param }}",
+      "deleted": "Goods удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Goods {{ id }}?"
+      },
+      "detail": {
+        "title": "Goods"
+      },
+      "name": "Name",
+      "description": "Description",
+      "customer": "Customer",
+      "goods": "Goods",
+      "transactionRow": "Transaction Row"
+    }
+  }
+}

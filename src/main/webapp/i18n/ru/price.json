@@ -1,0 +1,25 @@
+{
+  "xrisApp": {
+    "price": {
+      "home": {
+        "title": "Prices",
+        "createLabel": "Создать новый Price",
+        "createOrEditLabel": "Создать или отредактировать Price",
+        "notFound": "No Prices found"
+      },
+      "created": "Новый Price создан с идентификатором {{ param }}",
+      "updated": "Price обновлен с идентификатором {{ param }}",
+      "deleted": "Price удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Price {{ id }}?"
+      },
+      "detail": {
+        "title": "Price"
+      },
+      "value": "Value",
+      "price": "Price",
+      "transactionRow": "Transaction Row",
+      "department": "Department"
+    }
+  }
+}

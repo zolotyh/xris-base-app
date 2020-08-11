@@ -1,0 +1,44 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="transactionRow">
+            <h2><span jhiTranslate="xrisApp.transactionRow.detail.title">Transaction Row</span> {{ transactionRow.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="xrisApp.transactionRow.goods">Goods</span></dt>
+                <dd>
+                    <div *ngIf="transactionRow.goods">
+                        <a [routerLink]="['/goods-xris', transactionRow.goods?.id, 'view']">{{ transactionRow.goods?.id }}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="xrisApp.transactionRow.price">Price</span></dt>
+                <dd>
+                    <div *ngIf="transactionRow.price">
+                        <a [routerLink]="['/price-xris', transactionRow.price?.id, 'view']">{{ transactionRow.price?.id }}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="xrisApp.transactionRow.discount">Discount</span></dt>
+                <dd>
+                    <div *ngIf="transactionRow.discount">
+                        <a [routerLink]="['/discount-xris', transactionRow.discount?.id, 'view']">{{ transactionRow.discount?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/transaction-row-xris', transactionRow.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

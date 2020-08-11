@@ -1,0 +1,54 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="customer">
+            <h2><span jhiTranslate="xrisApp.customer.detail.title">Customer</span> {{ customer.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="xrisApp.customer.name">Name</span></dt>
+                <dd>
+                    <span>{{ customer.name }}</span>
+                </dd>
+                <dt><span jhiTranslate="xrisApp.customer.client">Client</span></dt>
+                <dd>
+                    <div *ngIf="customer.client">
+                        <a [routerLink]="['/client-xris', customer.client?.id, 'view']">{{ customer.client?.id }}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="xrisApp.customer.userInfo">User Info</span></dt>
+                <dd>
+                    <div *ngIf="customer.userInfo">
+                        <a [routerLink]="['/user-info-xris', customer.userInfo?.id, 'view']">{{ customer.userInfo?.id }}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="xrisApp.customer.department">Department</span></dt>
+                <dd>
+                    <div *ngIf="customer.department">
+                        <a [routerLink]="['/department-xris', customer.department?.id, 'view']">{{ customer.department?.id }}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="xrisApp.customer.goods">Goods</span></dt>
+                <dd>
+                    <div *ngIf="customer.goods">
+                        <a [routerLink]="['/goods-xris', customer.goods?.id, 'view']">{{ customer.goods?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/customer-xris', customer.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

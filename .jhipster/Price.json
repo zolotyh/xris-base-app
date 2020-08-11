@@ -1,0 +1,45 @@
+{
+  "name": "Price",
+  "fields": [
+    {
+      "fieldName": "value",
+      "fieldType": "Integer"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "discount",
+      "otherEntityRelationshipName": "price",
+      "relationshipName": "price",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "transactionRow",
+      "otherEntityRelationshipName": "price",
+      "relationshipName": "transactionRow",
+      "ownerSide": false
+    },
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "department",
+      "otherEntityRelationshipName": "price",
+      "relationshipName": "department",
+      "otherEntityField": "id",
+      "ownerSide": false
+    }
+  ],
+  "changelogDate": "20200811192135",
+  "entityTableName": "price",
+  "dto": "no",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*",
+  "angularJSSuffix": "xris"
+}

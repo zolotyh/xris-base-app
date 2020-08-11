@@ -1,0 +1,43 @@
+{
+  "name": "Transaction",
+  "fields": [
+    {
+      "fieldName": "datetime",
+      "fieldType": "Instant"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "userInfo",
+      "otherEntityRelationshipName": "transaction",
+      "relationshipName": "userInfo"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "department",
+      "otherEntityRelationshipName": "transaction",
+      "relationshipName": "department",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "transactionRow",
+      "otherEntityRelationshipName": "transaction",
+      "relationshipName": "transactionRow",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20200811192335",
+  "entityTableName": "transaction",
+  "dto": "no",
+  "pagination": "infinite-scroll",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*",
+  "angularJSSuffix": "xris"
+}

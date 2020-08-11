@@ -1,0 +1,26 @@
+{
+  "xrisApp": {
+    "customer": {
+      "home": {
+        "title": "Customers",
+        "createLabel": "Создать новый Customer",
+        "createOrEditLabel": "Создать или отредактировать Customer",
+        "notFound": "No Customers found"
+      },
+      "created": "Новый Customer создан с идентификатором {{ param }}",
+      "updated": "Customer обновлен с идентификатором {{ param }}",
+      "deleted": "Customer удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Customer {{ id }}?"
+      },
+      "detail": {
+        "title": "Customer"
+      },
+      "name": "Name",
+      "client": "Client",
+      "userInfo": "User Info",
+      "department": "Department",
+      "goods": "Goods"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "xrisApp": {
+    "transactionRow": {
+      "home": {
+        "title": "Transaction Rows",
+        "createLabel": "Create a new Transaction Row",
+        "createOrEditLabel": "Create or edit a Transaction Row",
+        "notFound": "No Transaction Rows found"
+      },
+      "created": "A new Transaction Row is created with identifier {{ param }}",
+      "updated": "A Transaction Row is updated with identifier {{ param }}",
+      "deleted": "A Transaction Row is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Transaction Row {{ id }}?"
+      },
+      "detail": {
+        "title": "Transaction Row"
+      },
+      "goods": "Goods",
+      "price": "Price",
+      "discount": "Discount"
+    }
+  }
+}

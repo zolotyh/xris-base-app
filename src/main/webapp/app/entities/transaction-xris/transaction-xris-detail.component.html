@@ -1,0 +1,42 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="transaction">
+            <h2><span jhiTranslate="xrisApp.transaction.detail.title">Transaction</span> {{ transaction.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="xrisApp.transaction.datetime">Datetime</span></dt>
+                <dd>
+                    <span>{{ transaction.datetime }}</span>
+                </dd>
+                <dt><span jhiTranslate="xrisApp.transaction.department">Department</span></dt>
+                <dd>
+                    <div *ngIf="transaction.department">
+                        <a [routerLink]="['/department-xris', transaction.department?.id, 'view']">{{ transaction.department?.id }}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="xrisApp.transaction.transactionRow">Transaction Row</span></dt>
+                <dd>
+                    <div *ngIf="transaction.transactionRow">
+                        <a [routerLink]="['/transaction-row-xris', transaction.transactionRow?.id, 'view']">{{ transaction.transactionRow?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/transaction-xris', transaction.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

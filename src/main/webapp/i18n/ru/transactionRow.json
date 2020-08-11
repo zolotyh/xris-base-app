@@ -1,0 +1,24 @@
+{
+  "xrisApp": {
+    "transactionRow": {
+      "home": {
+        "title": "Transaction Rows",
+        "createLabel": "Создать новый Transaction Row",
+        "createOrEditLabel": "Создать или отредактировать Transaction Row",
+        "notFound": "No Transaction Rows found"
+      },
+      "created": "Новый Transaction Row создан с идентификатором {{ param }}",
+      "updated": "Transaction Row обновлен с идентификатором {{ param }}",
+      "deleted": "Transaction Row удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Transaction Row {{ id }}?"
+      },
+      "detail": {
+        "title": "Transaction Row"
+      },
+      "goods": "Goods",
+      "price": "Price",
+      "discount": "Discount"
+    }
+  }
+}

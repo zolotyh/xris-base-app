@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+    <!--
+        Added the constraints for entity UserInfo.
+    -->
+    <changeSet id="20200811191935-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="user_info_id"
+                                 baseTableName="user_info_department"
+                                 constraintName="fk_user_info_department_user_info_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="user_info"/>
+
+        <addForeignKeyConstraint baseColumnNames="department_id"
+                                 baseTableName="user_info_department"
+                                 constraintName="fk_user_info_department_department_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="department"/>
+        
+        <addForeignKeyConstraint baseColumnNames="transaction_id"
+                                 baseTableName="user_info"
+                                 constraintName="fk_user_info_transaction_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="transaction"/>
+
+    </changeSet>
+</databaseChangeLog>

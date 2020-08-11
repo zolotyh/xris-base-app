@@ -1,0 +1,47 @@
+{
+  "name": "Goods",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "customer",
+      "otherEntityRelationshipName": "goods",
+      "relationshipName": "customer"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "price",
+      "otherEntityRelationshipName": "goods",
+      "relationshipName": "goods",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "transactionRow",
+      "otherEntityRelationshipName": "goods",
+      "relationshipName": "transactionRow",
+      "ownerSide": false
+    }
+  ],
+  "changelogDate": "20200811192035",
+  "entityTableName": "goods",
+  "dto": "no",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*",
+  "angularJSSuffix": "xris"
+}

@@ -1,0 +1,40 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="goods">
+            <h2><span jhiTranslate="xrisApp.goods.detail.title">Goods</span> {{ goods.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="xrisApp.goods.name">Name</span></dt>
+                <dd>
+                    <span>{{ goods.name }}</span>
+                </dd>
+                <dt><span jhiTranslate="xrisApp.goods.description">Description</span></dt>
+                <dd>
+                    <span>{{ goods.description }}</span>
+                </dd>
+                <dt><span jhiTranslate="xrisApp.goods.goods">Goods</span></dt>
+                <dd>
+                    <div *ngIf="goods.goods">
+                        <a [routerLink]="['/price-xris', goods.goods?.id, 'view']">{{ goods.goods?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/goods-xris', goods.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

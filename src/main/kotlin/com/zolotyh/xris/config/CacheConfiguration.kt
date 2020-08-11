@@ -55,6 +55,21 @@ class CacheConfiguration(
             createCache(cm, com.zolotyh.xris.domain.User::class.java.name + ".authorities")
             createCache(cm, com.zolotyh.xris.domain.PersistentToken::class.java.name)
             createCache(cm, com.zolotyh.xris.domain.User::class.java.name + ".persistentTokens")
+            createCache(cm, com.zolotyh.xris.domain.Client::class.java.name)
+            createCache(cm, com.zolotyh.xris.domain.Department::class.java.name)
+            createCache(cm, com.zolotyh.xris.domain.Department::class.java.name + ".prices")
+            createCache(cm, com.zolotyh.xris.domain.Department::class.java.name + ".userInfos")
+            createCache(cm, com.zolotyh.xris.domain.Customer::class.java.name)
+            createCache(cm, com.zolotyh.xris.domain.UserInfo::class.java.name)
+            createCache(cm, com.zolotyh.xris.domain.UserInfo::class.java.name + ".departments")
+            createCache(cm, com.zolotyh.xris.domain.Goods::class.java.name)
+            createCache(cm, com.zolotyh.xris.domain.Goods::class.java.name + ".customers")
+            createCache(cm, com.zolotyh.xris.domain.Price::class.java.name)
+            createCache(cm, com.zolotyh.xris.domain.Price::class.java.name + ".departments")
+            createCache(cm, com.zolotyh.xris.domain.Discount::class.java.name)
+            createCache(cm, com.zolotyh.xris.domain.Transaction::class.java.name)
+            createCache(cm, com.zolotyh.xris.domain.Transaction::class.java.name + ".userInfos")
+            createCache(cm, com.zolotyh.xris.domain.TransactionRow::class.java.name)
             // jhipster-needle-ehcache-add-entry
         }
     }

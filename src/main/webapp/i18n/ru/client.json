@@ -1,0 +1,23 @@
+{
+  "xrisApp": {
+    "client": {
+      "home": {
+        "title": "Clients",
+        "createLabel": "Создать новый Client",
+        "createOrEditLabel": "Создать или отредактировать Client",
+        "notFound": "No Clients found"
+      },
+      "created": "Новый Client создан с идентификатором {{ param }}",
+      "updated": "Client обновлен с идентификатором {{ param }}",
+      "deleted": "Client удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Client {{ id }}?"
+      },
+      "detail": {
+        "title": "Client"
+      },
+      "phoneNumber": "Phone Number",
+      "client": "Client"
+    }
+  }
+}

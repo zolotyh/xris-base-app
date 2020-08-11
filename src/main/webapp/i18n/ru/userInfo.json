@@ -1,0 +1,25 @@
+{
+  "xrisApp": {
+    "userInfo": {
+      "home": {
+        "title": "User Infos",
+        "createLabel": "Создать новый User Info",
+        "createOrEditLabel": "Создать или отредактировать User Info",
+        "notFound": "No User Infos found"
+      },
+      "created": "Новый User Info создан с идентификатором {{ param }}",
+      "updated": "User Info обновлен с идентификатором {{ param }}",
+      "deleted": "User Info удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить User Info {{ id }}?"
+      },
+      "detail": {
+        "title": "User Info"
+      },
+      "email": "Email",
+      "login": "Login",
+      "department": "Department",
+      "transaction": "Transaction"
+    }
+  }
+}

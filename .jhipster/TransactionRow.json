@@ -1,0 +1,42 @@
+{
+  "name": "TransactionRow",
+  "fields": [],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "goods",
+      "otherEntityRelationshipName": "transactionRow",
+      "relationshipName": "goods",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "price",
+      "otherEntityRelationshipName": "transactionRow",
+      "relationshipName": "price",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "discount",
+      "otherEntityRelationshipName": "transactionRow",
+      "relationshipName": "discount",
+      "otherEntityField": "id",
+      "ownerSide": true
+    }
+  ],
+  "changelogDate": "20200811192435",
+  "entityTableName": "transaction_row",
+  "dto": "no",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*",
+  "angularJSSuffix": "xris"
+}

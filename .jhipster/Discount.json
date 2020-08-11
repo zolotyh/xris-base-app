@@ -1,0 +1,30 @@
+{
+  "name": "Discount",
+  "fields": [
+    {
+      "fieldName": "value",
+      "fieldType": "Integer"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "transactionRow",
+      "otherEntityRelationshipName": "discount",
+      "relationshipName": "transactionRow",
+      "ownerSide": false
+    }
+  ],
+  "changelogDate": "20200811192235",
+  "entityTableName": "discount",
+  "dto": "no",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*",
+  "angularJSSuffix": "xris"
+}

@@ -1,0 +1,50 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-transaction-row-xris-heading" jhiTranslate="xrisApp.transactionRow.home.createOrEditLabel">Create or edit a Transaction Row</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="xrisApp.transactionRow.goods" for="field_goods">Goods</label>
+                    <select class="form-control" id="field_goods" name="goods" formControlName="goods">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="goodsOption.id === editForm.get('goods')!.value?.id ? editForm.get('goods')!.value : goodsOption" *ngFor="let goodsOption of goods; trackBy: trackById">{{ goodsOption.id }}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="xrisApp.transactionRow.price" for="field_price">Price</label>
+                    <select class="form-control" id="field_price" name="price" formControlName="price">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="priceOption.id === editForm.get('price')!.value?.id ? editForm.get('price')!.value : priceOption" *ngFor="let priceOption of prices; trackBy: trackById">{{ priceOption.id }}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="xrisApp.transactionRow.discount" for="field_discount">Discount</label>
+                    <select class="form-control" id="field_discount" name="discount" formControlName="discount">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="discountOption.id === editForm.get('discount')!.value?.id ? editForm.get('discount')!.value : discountOption" *ngFor="let discountOption of discounts; trackBy: trackById">{{ discountOption.id }}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
